@@ -29,7 +29,7 @@ actual command from other text in Unix documentation.
 2.  What does the ~ (tilde) character in the above command to change directory 
     refer to?
 ----
-
+My home directory
 
 ----
 3.  A good habit to develop, especially while you're developing your skills on 
