@@ -38,14 +38,14 @@ My home directory
 ----
 
 $ pwd
-<type or copy-paste the result here>
+
+/Users/snaik/Development/workspaces/sahillnaik-java-exercises/m1-w1d1-intro-to-tools/java-helloworld
 
 The present working directory displayed should match the directory you changed 
 to in Exercise 1.  Note, the two may not match at the very beginning if you
 used the tilde when changing directories.  The tilde is a conveniece to save 
 you some typing.  The system resolves the tilde to the full location as it
 changes directory, and the "pwd" command reflects this.
-
 
 ----
 4.  Display a list of all the files and folders in your present working 
@@ -54,7 +54,14 @@ changes directory, and the "pwd" command reflects this.
 ----
 
 $ ls -la
-<type or copy-paste the result here>
+
+total 24
+drwxr-xr-x  6 snaik  staff   204 May  8 14:51 .
+drwxr-xr-x  5 snaik  staff   170 May  8 14:48 ..
+-rw-r--r--@ 1 snaik  staff  6148 May  8 14:51 .DS_Store
+drwxr-xr-x  3 snaik  staff   102 May  8 14:46 database
+-rwxr-xr-x  1 snaik  staff  1091 May  8 14:46 pom.xml
+drwxr-xr-x  4 snaik  staff   136 May  8 14:46 src
 
 
 ----
@@ -62,14 +69,16 @@ $ ls -la
     Exercise 4 represent?
 ----
 
-<type or copy-paste your answer here>
+"." is the current directory
+".." is for parent directory
 
 ----
 6.  What are the names of the files, including any dot-files, displayed in the
     directory listing in Exercise 4?
 ----
 
-<type or copy-paste your answer here>
+.DS_store
+pom.xml
 
 
 ----
@@ -77,7 +86,10 @@ $ ls -la
     the directory listing in Exercise 4?
 ----
 
-<type or copy-paste your answer here>
+.
+..
+database
+src
 
 
 ----
@@ -123,13 +135,21 @@ You are encouraged to make "less" part of your standard command line toolkit.
 Did you remember to save "m1-introduction-to-tools-exercise.txt"?
 
 $ git status
-<type or copy-paste the result here>
+
+modified:   ../introduction-to-tools-exercises.txt
 
 $ git add .
-<type or copy-paste the result here>
+
+no results
 
 $ git commit -m "Good stopping point"
-<type or copy-paste the result here>
+
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+	modified:   ../introduction-to-tools-exercises.txt
+
+no changes added to commit
 
 Note, you do not need to push this commit up to BitBucket. The typical Git 
 workflow is to many small commits to your local repo, with pushes up to 
@@ -143,7 +163,8 @@ BitBucket when a feature, fix, or in this case, assignment is finished.
 
 $ cd src/main/java/com/techelevator
 $ <enter command to display present working directory>
-<type or copy-paste your present working directory here>
+
+/Users/snaik/Development/workspaces/sahillnaik-java-exercises/m1-w1d1-intro-to-tools/java-helloworld/src/main/java/com/techelevator
 
 
 ----
@@ -160,7 +181,9 @@ $ <enter command to display present working directory>
 ----
 
 $ <enter command to list all files and folders including dot-files and dot-folders>
-<type or copy-paste the result here>
+.
+.. 
+Helloworld.java
 
 
 ----
@@ -175,7 +198,8 @@ The "cp" parameters are the name of the source file followed by the name of the
 destination file. 
 
 $ <enter command to list all files and folders in order to confirm the creation of the backup file>
-<type or copy-paste the result here>
+
+Helloworld.java		Helloworld.java.backup
 
 
 ----    
@@ -189,7 +213,8 @@ The "mv" parameters are the existing name of the file followed by the new name
 of the file. 
 
 $ <enter command to list all files and folders in order to confirm the renaming of the file>
-<type or copy-paste the result here>
+
+Helloworld.java		Helloworld.java.copy
 
 
 ----
