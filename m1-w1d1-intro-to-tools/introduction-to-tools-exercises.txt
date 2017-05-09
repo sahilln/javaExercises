@@ -223,16 +223,41 @@ Helloworld.java		Helloworld.java.copy
 ----
 
 $ <enter the Git command to display status>
-<type or copy-paste the result here>
+
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   ../../../../../../introduction-to-tools-exercises.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	Helloworld.java.copy
+
+no changes added to commit (use "git add" and/or "git commit -a")
 
 $ <enter the Git command to "stage" all changes>
-<type or copy-paste the result here>
+
+no result
 
 $ <enter the Git command to save all "staged" changes>
-<type or copy-paste the result here>
+
+[master 21e9d4c] Step 15
+ 2 files changed, 47 insertions(+), 13 deletions(-)
+ create mode 100755 m1-w1d1-intro-to-tools/java-helloworld/src/main/java/com/techelevator/Helloworld.java.copy
 
 $ git push
-<type or copy-paste the result here>
+
+Counting objects: 10, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (10/10), 1.30 KiB | 0 bytes/s, done.
+Total 10 (delta 2), reused 0 (delta 0)
+To https://bitbucket.org/te-cbus-cohort-2/sahillnaik-java-exercises.git
+   540c0d1..21e9d4c  master -> master
 
 
 ----
@@ -244,7 +269,8 @@ $ rm Helloworld.java.copy
 The "rm" parameter is the name of the file to be deleted.
 
 $ <enter command to list all files and folders in order to confirm the file deletion>
-<type or copy-paste the result here>
+
+Helloworld.java
 
 
 ----
@@ -266,7 +292,9 @@ command line when that seems natural.
 Regardless of the option you chose, check your new location.
 
 $ <enter command to display present working directory>
-<type or copy-paste your present working directory here>
+
+/Users/snaik/Development/workspaces/sahillnaik-java-exercises/m1-w1d1-intro-to-tools/java-helloworld
+
 
 
 ----
@@ -277,7 +305,8 @@ $ <enter command to display present working directory>
 $ mkdir docs
 $ <enter the command to change directory to "docs" using a relative path>
 $ <enter command to display present working directory>
-<type or copy-paste your present working directory here>
+
+/Users/snaik/Development/workspaces/sahillnaik-java-exercises/m1-w1d1-intro-to-tools/java-helloworld/docs
 
 ----
 19. Create a new file name "readme.txt" using Visual Studio Code, and add the text
