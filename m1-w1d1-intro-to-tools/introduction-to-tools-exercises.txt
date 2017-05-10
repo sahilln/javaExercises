@@ -172,7 +172,7 @@ $ <enter command to display present working directory>
     path?
 ----
 
-<type your answer here>
+absolute path
 
 
 ----
