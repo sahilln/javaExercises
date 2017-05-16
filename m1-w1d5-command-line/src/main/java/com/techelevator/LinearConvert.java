@@ -15,11 +15,29 @@ package com.techelevator;
  Is the measurement in (m)eter, or (f)eet? f
  58f is 17m.
  */
+import java.util.Scanner;
 
 public class LinearConvert {
 
 	public static void main(String[] args) {
-
+		Scanner input = new Scanner(System.in);
+		
+		double length, meter, feet;
+		String unit;
+		
+		System.out.println("Please enter the length: ");
+		length = input.nextDouble();
+		input.nextLine();
+		System.out.println("Is the measurement in (m)eter, or (f)eet?");
+		unit = input.nextLine();
+		
+		if (unit.equals("m")){
+			feet = length * 3.2808399; 
+			System.out.println(length + unit + " is " + feet + "f.");
+		}
+		else{
+			meter = length * 0.3048;
+			System.out.println(length + unit + " is " + meter + "m.");
+		}
 	}
-
 }
