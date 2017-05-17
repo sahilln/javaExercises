@@ -380,8 +380,9 @@ public class Exercises {
 		int stringLength = str.length();
 		String bits = "";
 		for (int i = 0; i < stringLength; i = i + 2){
-			bits = 
+			bits += str.charAt(i);
 		}
+		return bits;
 	}
 
 	/*
@@ -391,7 +392,13 @@ public class Exercises {
 	 stringSplosion("ab") → "aab"
 	 */
 	public String stringSplosion(String str) {
-		return null;
+		int stringLength = str.length();
+		String splosion = "";
+		for (int i = 1; i < stringLength; i++){
+			splosion = str.substring(0, i);
+			splosion += splosion;
+		}
+		return splosion;
 	}
 
 	/*
