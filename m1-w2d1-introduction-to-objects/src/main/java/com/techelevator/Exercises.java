@@ -241,13 +241,11 @@ public class Exercises {
 	 twoChar("java", 3) → "ja"
 	 */
 	public String twoChar(String str, int index) {
-		String twoChars = str.substring(index, index + 2);
-		int lengthTwoChars = twoChars.length();
-		if (lengthTwoChars < 2 || index > (str.length() - 1)){
-			return str.substring(0, 2);
+		if(index <= str.length()-2 && index >= 0){
+			return str.substring(index, index+2);
 		}
-		else 
-			return str.substring(index, index + 2);
+		
+		return str.substring(0, 2);
 	}
 
 	/*
@@ -394,11 +392,12 @@ public class Exercises {
 	public String stringSplosion(String str) {
 		int stringLength = str.length();
 		String splosion = "";
-		for (int i = 1; i < stringLength; i++){
+		String splosionAnswer = "";
+		for (int i = 1; i <= stringLength; i++){
 			splosion = str.substring(0, i);
-			splosion += splosion;
+			splosionAnswer += splosion;
 		}
-		return splosion;
+		return splosionAnswer;
 	}
 
 	/*
@@ -409,7 +408,21 @@ public class Exercises {
 	 last2("axxxaaxx") → 2
 	 */
 	public int last2(String str) {
-		return 0;
+		if(str.length() <= 2){
+			return 0;
+		}
+		else{
+			String lastTwoChars = str.substring(str.length() - 2);
+			int count = 0;
+			
+			for(int i = 0; i <str.length() - 2; i++){
+				if (str.substring(i, i + 2).equals(lastTwoChars)){
+					count++;
+				}
+			}
+			
+			return count;
+		}
 	}
 
 	/*
@@ -420,7 +433,20 @@ public class Exercises {
 	 stringX("xabxxxcdx") → "xabcdx"
 	 */
 	public String stringX(String str) {
-		return null;
+		String withoutX = "";
+		for(int i = 0; i < str.length(); i++){
+			if(i == 0 || i == str.length() - 1){
+				withoutX += str.charAt(i);
+			}
+			else{
+				if((str.charAt(i)) == 'x'){
+				}
+				else{
+				withoutX += str.charAt(i);
+				}
+			}
+		}
+		return withoutX;
 	}
 
 	/*
@@ -430,7 +456,16 @@ public class Exercises {
 	 altPairs("CodingHorror") → "Congrr"
 	 */
 	public String altPairs(String str) {
-		return null;
+		String alt = "";
+		for (int i = 0; i < str.length(); i+=4){
+			if(i + 1 < str.length()){
+				alt = alt + str.charAt(i) + str.charAt(i + 1);
+			}
+			else if(i == str.length() - 1){
+				alt = alt + str.charAt(i);
+			}
+		}
+		return alt;
 	}
 
 	/*
@@ -441,7 +476,26 @@ public class Exercises {
 	 stringYak("yak123ya") → "123ya"
 	 */
 	public String stringYak(String str) {
-		return null;
+		String withoutYak = "";
+		for (int i = 0; i < str.length(); i ++){
+			String checkLength = str.substring(i);
+			if(checkLength.length() < 3){
+				withoutYak = withoutYak + str.substring(i, i + 1);
+			}
+			else{
+				if(i + 2 < str.length()){
+					String yak = str.substring(i, i + 3);
+					if (yak.equals("yak")){
+						i += 2;
+					}
+					else{
+					withoutYak = withoutYak + str.substring(i, i+1);
+					}
+				}	
+			}
+		}
+		return withoutYak;
 	}
-	
+	// found out about .replace() right after I finished this....
+
 }
