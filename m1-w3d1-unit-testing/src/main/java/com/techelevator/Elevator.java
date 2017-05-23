@@ -88,10 +88,10 @@ public class Elevator {
      */
     public boolean GoUp(int desiredFloor)
     {
-        currentLevel = desiredFloor;
 
-        if (desiredFloor > currentLevel && desiredFloor <= numberOfLevels && doorOpen)
+        if (desiredFloor > currentLevel && desiredFloor <= numberOfLevels && !doorOpen)
         {
+        	currentLevel = desiredFloor;
             return true;
         }
         else

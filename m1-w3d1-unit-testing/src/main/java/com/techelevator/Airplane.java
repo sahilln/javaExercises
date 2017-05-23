@@ -2,7 +2,7 @@ package com.techelevator;
 
 public class Airplane {
 
-	private String planeNumber;
+	private String planeNumber = "453011";
     private int totalFirstClassSeats;
     private int bookedFirstClassSeats = 0;
     private int totalCoachSeats;
@@ -39,7 +39,7 @@ public class Airplane {
      * @return availableFirstClassSeats
      */
     public int getAvailableFirstClassSeats() {
-        return bookedFirstClassSeats;
+        return totalFirstClassSeats - bookedFirstClassSeats;
     }
 
     /**

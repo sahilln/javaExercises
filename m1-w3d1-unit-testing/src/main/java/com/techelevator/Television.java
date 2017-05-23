@@ -4,12 +4,12 @@ public class Television {
 
     private boolean isOn;
     private int selectedChannel = 3;
-    private int currentVolume;
+    private int currentVolume = 2;
 
     /**
      * Current on/off status of the tv
      */
-    public boolean IsOn() {
+    public boolean isOn() {
         return isOn;        
     }
 
@@ -50,7 +50,7 @@ public class Television {
      */
     public void ChangeChannel(int newChannel)
     {
-        if (isOn && newChannel > 3 && newChannel < 18)
+        if (isOn && newChannel >= 3 && newChannel <= 18)
         {
             selectedChannel = newChannel;
         }
@@ -59,17 +59,19 @@ public class Television {
     /**
      * Raises the volume. It won't raise it past 10 and the tv has to be on 
      */
-    public void RaiseVolume()
-    {
-        currentVolume++;
+    public void RaiseVolume(){
+    	if(isOn && currentVolume < 10){
+    		currentVolume++;
+    	}
     }
 
     /**
      * Lowers the volume. It won't lower it below 0 and the tv has to be on 
      */
-    public void LowerVolume()
-    {
+    public void LowerVolume(){
+    	if(isOn && currentVolume > 0){
         currentVolume--;
+    	}
     }
 
 }
