@@ -77,7 +77,7 @@ public class Elevator {
     {
         if (!moving)
         {
-            doorOpen = !doorOpen;
+            doorOpen = false;
         }
     }
 
@@ -109,7 +109,7 @@ public class Elevator {
     {
         if (!doorOpen && desiredFloor < currentLevel && desiredFloor > 0)
         {
-            currentLevel -= desiredFloor;
+            currentLevel = desiredFloor;
             return true;
         }
 

@@ -84,6 +84,7 @@ public class ElevatorTest {
 		//Assert
 		Assert.assertEquals(10, myElevator.getCurrentLevel());
 	}
+	@Test
 	public void elevator_only_goes_up(){
 		myElevator.CloseDoor();
 		myElevator.GoUp(5);
@@ -98,7 +99,7 @@ public class ElevatorTest {
 		myElevator.CloseDoor();
 		myElevator.GoUp(4);
 		myElevator.GoDown(1);
-		Assert.assertEquals(4, myElevator.getCurrentLevel());
+		Assert.assertEquals(1, myElevator.getCurrentLevel());
 	}
 
 	@Test
@@ -125,6 +126,7 @@ public class ElevatorTest {
 	//Assert
 		Assert.assertEquals(1, myElevator.getCurrentLevel());
 	}
+	@Test
 	public void elevator_only_goes_down_when_Go_Down_is_called(){
 		myElevator.CloseDoor();
 		myElevator.GoUp(5);

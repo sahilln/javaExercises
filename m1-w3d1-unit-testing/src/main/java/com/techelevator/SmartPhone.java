@@ -4,8 +4,8 @@ public class SmartPhone {
 
     private String phoneNumber;
     private String carrier;
-    private String operatingSystem;
-    private boolean onCall;
+    private String operatingSystem = "iOS";
+    private boolean onCall = false;
     private int batteryCharge = 100;
 
     /**
@@ -94,7 +94,7 @@ public class SmartPhone {
      */
     public void HangUp()
     {
-        onCall = !onCall;
+        onCall = false;
     }
 
     /**
@@ -102,7 +102,7 @@ public class SmartPhone {
      */
     public void RechargeBattery()
     {
-        batteryCharge = 95;
+        batteryCharge = 100;
     }
 
 }

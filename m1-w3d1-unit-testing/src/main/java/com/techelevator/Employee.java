@@ -5,7 +5,7 @@ public class Employee {
 	private int employeeId;
     private String firstName;
     private String lastName;
-    private String department;
+    private String department = "website";
     private double annualSalary;
 
     /**
@@ -16,7 +16,8 @@ public class Employee {
      * @param salary
      */
     public Employee(int employeeId, String firstName, String lastName, double salary) {
-        this.firstName = firstName;
+        this.employeeId = employeeId;
+    	this.firstName = firstName;
         this.lastName = lastName;
         this.annualSalary = salary;
     }
