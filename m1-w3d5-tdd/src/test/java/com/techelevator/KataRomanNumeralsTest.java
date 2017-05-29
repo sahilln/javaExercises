@@ -60,11 +60,11 @@ private KataRomanNumerals romanNumerals;
 	public void ninety_returns_XC(){
 		Assert.assertEquals("XC", romanNumerals.convertToRM(90));
 	}
-	
+	 
 	@Test
 	public void one_hundred_returns_C(){
 		Assert.assertEquals("C", romanNumerals.convertToRM(100));
-	}
+	} 
 	
 	@Test
 	public void four_hundred_returns_CD(){
@@ -74,7 +74,7 @@ private KataRomanNumerals romanNumerals;
 	@Test
 	public void five_hundred_returns_D(){
 		Assert.assertEquals("D", romanNumerals.convertToRM(500));
-	}
+	} 
 	
 	@Test
 	public void nine_hundred_returns_CM(){
