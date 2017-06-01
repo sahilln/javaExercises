@@ -1,6 +1,8 @@
 package com.techelevator;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class FileSplitter {
@@ -8,9 +10,29 @@ public class FileSplitter {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		File file = getFileFromUser();
+		String outputBase = makeNewFile();
 		System.out.println("How many lines would you like in each file?");
 		int numberOfLines = input.nextInt();
+		int count = 1;
+		
+		try (Scanner fileInput = new Scanner(file)) {
 
+			while (fileInput.hasNextLine()) {
+				String outputFile = outputBase + count + ".txt";
+
+				try (PrintWriter writer = new PrintWriter(outputFile)) {
+					for (int i = 0; i < numberOfLines; i++) {
+						if(fileInput.hasNextLine()){
+							String line = fileInput.nextLine();
+							writer.println(line);
+						}
+					}
+				}
+				count++;
+			}
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
 	}
 
 	private static File getFileFromUser() {
@@ -28,6 +50,13 @@ public class FileSplitter {
 		}
 
 		return file;
+	}
+	
+	private static String makeNewFile() {
+		System.out.println("Where would you like to save the splits?");
+		Scanner input = new Scanner(System.in);
+		String path = input.nextLine();
+		return path;
 	}
 
 }
