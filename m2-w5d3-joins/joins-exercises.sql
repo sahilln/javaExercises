@@ -86,19 +86,40 @@ WHERE film.release_year = '2006' AND category.name = 'Sci-Fi';
 -- (2 rows)
 
 SELECT film.title
-FROM film
-
-
-WHERE actor.first_name = 'NICK' AND actor.last_name = 'Stallone' AND category.name = 'Action';
+FROM actor
+JOIN film_actor ON actor.actor_id = film_actor.actor_id
+JOIN film ON film_actor.film_id = film.film_id
+JOIN film_category ON film.film_id = film_category.film_id
+JOIN category ON film_category.category_id = category.category_id
+WHERE actor.first_name = 'NICK' AND actor.last_name = 'STALLONE' AND category.name = 'Action';
 
 -- 11. The address of all stores, including street address, city, district, and country
 -- (2 rows)
 
+SELECT store.store_id, address.address, city.city, address.district, country.country
+FROM store
+JOIN address on store.address_id = address.address_id
+JOIN city on address.city_id = city.city_id
+JOIN country on city.country_id = country.country_id
+
+
 -- 12. A list of all stores by ID, the store’s street address, and the name of the store’s manager
 -- (2 rows)
 
+SELECT store.store_id, address.address, (staff.first_name ||  ' ' || staff.last_name) AS store_manager
+FROM store
+JOIN address on store.address_id = address.address_id
+JOIN staff on store.store_id = staff.store_id
+
+
 -- 13. The first and last name of the top ten customers ranked by number of rentals 
 -- (#1 should be “ELEANOR HUNT” with 46 rentals, #10 should have 39 rentals)
+
+SELECT customer.first_name, customer.last_name, count(*) as count
+FROM customer
+JOIN rental on customer.customer_id = rental.customer_id
+GROUP BY rental.rental_date
+LIMIT 10;
 
 -- 14. The first and last name of the top ten customers ranked by dollars spent 
 -- (#1 should be “KARL SEAL” with 221.55 spent, #10 should be “ANA BRADLEY” with 174.66 spent)
