@@ -115,17 +115,35 @@ JOIN staff on store.store_id = staff.store_id
 -- 13. The first and last name of the top ten customers ranked by number of rentals 
 -- (#1 should be “ELEANOR HUNT” with 46 rentals, #10 should have 39 rentals)
 
-SELECT customer.first_name, customer.last_name, count(*) as count
-FROM customer
-JOIN rental on customer.customer_id = rental.customer_id
-GROUP BY rental.rental_date
+SELECT (customer.first_name || ' ' || customer.last_name) as name, count(*) as count
+FROM rental
+JOIN customer on rental.customer_id = customer.customer_id
+GROUP BY name
+ORDER BY count DESC
 LIMIT 10;
 
 -- 14. The first and last name of the top ten customers ranked by dollars spent 
 -- (#1 should be “KARL SEAL” with 221.55 spent, #10 should be “ANA BRADLEY” with 174.66 spent)
 
+SELECT (customer.first_name || ' ' || customer.last_name) as name, SUM(payment.amount) as dollars_spent
+FROM customer
+JOIN payment on customer.customer_id = payment.customer_id
+GROUP BY customer.customer_id
+ORDER BY dollars_spent DESC
+LIMIT 10
+
+
 -- 15. The store ID, street address, total number of rentals, total amount of sales (i.e. payments), and average sale of each store 
 -- (Store 1 has 7928 total rentals and Store 2 has 8121 total rentals)
+
+SELECT store.store_id, address.address, count(rental.rental_id) as total_rentals, sum(payment.amount) as total_sales, AVG(payment.amount) as average_sales
+FROM rental
+JOIN inventory ON rental.inventory_id = inventory.inventory_id
+JOIN store ON inventory.store_id = store.store_id
+JOIN address ON store.address_id = address.address_id
+JOIN payment on rental.rental_id = payment.rental_id
+GROUP BY store.store_id, address.address;
+
 
 -- 16. The top ten film titles by number of rentals
 -- (#1 should be “BUCKET BROTHERHOOD” with 34 rentals and #10 should have 31 rentals)
@@ -141,11 +159,56 @@ LIMIT 10;
 -- 17. The top five film categories by number of rentals 
 -- (#1 should be “Sports” with 1179 rentals and #5 should be “Family” with 1096 rentals)
 
+SELECT category.name, count(*) as count
+FROM rental
+JOIN inventory on rental.inventory_id = inventory.inventory_id
+JOIN film on inventory.film_id = film.film_id
+JOIN film_category on film.film_id = film_category.film_id
+JOIN category on film_category.category_id = category.category_id
+GROUP BY category.name
+ORDER BY count DESC
+LIMIT 5;
+
+
 -- 18. The top five Action film titles by number of rentals 
 -- (#1 should have 30 rentals and #5 should have 28 rentals)
+
+SELECT film.title, count(*) as count
+FROM rental
+JOIN inventory on rental.inventory_id = inventory.inventory_id
+JOIN film on inventory.film_id = film.film_id
+JOIN film_category on film.film_id = film_category.film_id
+JOIN category on film_category.category_id = category.category_id
+WHERE category.name = 'Action'
+GROUP BY film.title
+ORDER BY count DESC
+LIMIT 5;
 
 -- 19. The top 10 actors ranked by number of rentals of films starring that actor 
 -- (#1 should be “GINA DEGENERES” with 753 rentals and #10 should be “SEAN GUINESS” with 599 rentals)
 
+SELECT (actor.first_name || ' ' || actor.last_name) as name, count(*) as count
+FROM rental
+JOIN inventory on rental.inventory_id = inventory.inventory_id
+JOIN film on inventory.film_id = film.film_id
+JOIN film_actor on film.film_id = film_actor.film_id
+JOIN actor on film_actor.actor_id = actor.actor_id
+GROUP BY name
+ORDER BY count DESC
+LIMIT 10;
+
 -- 20. The top 5 “Comedy” actors ranked by number of rentals of films in the “Comedy” category starring that actor 
 -- (#1 should have 87 rentals and #5 should have 72 rentals)
+
+SELECT (actor.first_name || ' ' || actor.last_name) as actor_name, count(*) as count
+FROM rental
+JOIN inventory on rental.inventory_id = inventory.inventory_id
+JOIN film on inventory.film_id = film.film_id
+JOIN film_actor on film.film_id = film_actor.film_id
+JOIN actor on film_actor.actor_id = actor.actor_id
+JOIN film_category on film.film_id = film_category.film_id
+JOIN category on film_category.category_id = category.category_id
+WHERE category.name = 'Comedy'
+GROUP BY actor_name
+ORDER BY count DESC
+LIMIT 5;
