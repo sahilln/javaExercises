@@ -37,9 +37,6 @@ UPDATE film_category
 SET category_id = 17
 WHERE film_id = 1001 OR film_id = 274 OR film_id = 494 OR film_id = 714 OR film_id = 996;
 
---SELECT * FROM film_category
---WHERE film_id = 1001 OR film_id = 274 OR film_id = 494 OR film_id = 714 OR film_id = 996;
-
 -- 6. Mathmagical films always have a "G" rating, adjust all Mathmagical films 
 -- accordingly.
 -- (5 rows affected)
@@ -47,6 +44,7 @@ WHERE film_id = 1001 OR film_id = 274 OR film_id = 494 OR film_id = 714 OR film_
 UPDATE film
 SET rating = 'G'
 WHERE (SELECT category_id
+       FROM 
        
 
 --SELECT * FROM film
