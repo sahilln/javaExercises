@@ -81,6 +81,7 @@ html {
   background-color: #ea4862;
 }
 
+<<<<<<< HEAD
 .odd{
   background-color: #43abcf;
 } 
@@ -89,3 +90,18 @@ html {
 	display: flex;
 	justify-content: center;
 }
+=======
+ .box {
+	background-color: green;
+	display: block;
+}
+
+.even {
+	background-color: red;
+	display: block;
+}
+
+.layer { 
+	display: inline;
+}
+>>>>>>> 51eec58421fe18d0b19b81464119ed09f9df89e2
