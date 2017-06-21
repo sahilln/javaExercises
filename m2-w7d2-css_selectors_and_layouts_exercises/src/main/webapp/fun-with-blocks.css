@@ -1,3 +1,91 @@
+/* html {
+  font: 80px Courier;
+  color: white;
+}
+
+.box{
+  padding: 20px;
+  width: 80px;
+  text-align: center;
+}
+
+.even {
+  background-color: #ec4963;
+}
+
+.odd{
+  background-color: #43abcf;
+}  */
+
+/* html {
+  font: 80px Courier;
+  color: white;
+}
+
+.box{ 
+  float: left;
+  display: inline; 
+  padding: 20px;
+  width: 80px; 
+  text-align: center;
+}
+
+.even {
+  background-color: #ea4862;
+}
+
+.odd{
+  background-color: #43abcf;
+}  */
+
+/* html {
+  font: 80px Courier;
+  color: white;
+}
+
+.box{ 
+  float: left;
+  display: block; 
+  padding: 20px;
+  width: 80px; 
+  text-align: center;
+}
+
+.even {
+  background-color: #ea4862;
+}
+
+.odd{
+  background-color: #43abcf;
+} 
+
+.layer{
+	display: flex;
+	justify-content: center;
+} */
+
 html {
-  font: 96px Courier;
+  font: 80px Courier;
+  color: white;
+}
+
+.box{ 
+  float: left;
+  display: block; 
+  padding: 20px;
+  width: 80px; 
+  text-align: center;
+}
+
+.even {
+  background-color: #ea4862;
+}
+
+.odd{
+  background-color: #43abcf;
+} 
+
+.layer{
+	display: flex;
+	justify-content: center;
 }
