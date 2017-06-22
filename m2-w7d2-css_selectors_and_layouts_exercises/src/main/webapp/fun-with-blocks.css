@@ -1,4 +1,5 @@
-/* html {
+/* ----------------------------
+html {
   font: 80px Courier;
   color: white;
 }
@@ -15,8 +16,8 @@
 
 .odd{
   background-color: #43abcf;
-}  */
-
+}
+----------------------------- */
 /* html {
   font: 80px Courier;
   color: white;
@@ -24,7 +25,6 @@
 
 .box{ 
   float: left;
-  display: inline; 
   padding: 20px;
   width: 80px; 
   text-align: center;
@@ -36,16 +36,14 @@
 
 .odd{
   background-color: #43abcf;
-}  */
-
+} 
+------------------------------ */
 /* html {
   font: 80px Courier;
   color: white;
 }
 
 .box{ 
-  float: left;
-  display: block; 
   padding: 20px;
   width: 80px; 
   text-align: center;
@@ -62,46 +60,62 @@
 .layer{
 	display: flex;
 	justify-content: center;
-} */
-
+}
+------------------------------- */
 html {
   font: 80px Courier;
   color: white;
 }
 
-.box{ 
-  float: left;
-  display: block; 
+.box{
   padding: 20px;
-  width: 80px; 
+  width: 80px;
   text-align: center;
 }
-
-.even {
-  background-color: #ea4862;
+#box_1{
+	position: relative;
+	left: 120px
 }
 
-<<<<<<< HEAD
+#box_2{
+	position: relative;
+	left: 240px
+}
+
+#box_3{
+	position: relative;
+	left: 360px
+}
+
+#box_4{
+	position: relative;
+	left: 480px
+}
+
+#box_5{
+	position: relative;
+	left: 480px
+}
+
+#box_6{
+	position: relative;
+	left: 360px
+}
+
+#box_7{
+	position: relative;
+	left: 240px
+}
+
+#box_8{
+	position: relative;
+	left: 120px
+}
+
+.even {
+  background-color: #ec4963;
+}
+
 .odd{
   background-color: #43abcf;
-} 
-
-.layer{
-	display: flex;
-	justify-content: center;
 }
-=======
- .box {
-	background-color: green;
-	display: block;
-}
-
-.even {
-	background-color: red;
-	display: block;
-}
-
-.layer { 
-	display: inline;
-}
->>>>>>> 51eec58421fe18d0b19b81464119ed09f9df89e2

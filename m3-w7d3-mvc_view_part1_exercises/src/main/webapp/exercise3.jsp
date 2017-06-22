@@ -24,6 +24,7 @@
 			 
 			See exercise3-echo.png for example output
 		 --%>
+		 <c:forEach begin="1" end=""
 		</ul>
 		
 	</body>
