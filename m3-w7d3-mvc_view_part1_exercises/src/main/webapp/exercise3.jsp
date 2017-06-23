@@ -24,8 +24,31 @@
 			 
 			See exercise3-echo.png for example output
 		 --%>
-		 <c:forEach begin="1" end=""
 		</ul>
+		<c:choose>
+			<c:when test="${empty param.word}">
+				<c:set var="word" value="Hello" />
+			</c:when>
+			<c:otherwise>
+				<c:set var="word" value="${param.word}" />
+			</c:otherwise>
+		</c:choose>
+		
+		<c:choose>
+			<c:when test="${empty param.count}">
+				<c:set var="count" value="20" />
+			</c:when>
+			<c:otherwise>
+				<c:set var="count" value="${param.count}" />
+			</c:otherwise>
+		</c:choose>
+		
+		<c:forEach var= "i" begin="1"  end="${count}" >
+			<c:set var="size" value="${count - i}" />
+			<div style="font-size:${size}px">
+			${word}
+			</div>
+		</c:forEach>
 		
 	</body>
 </html>
