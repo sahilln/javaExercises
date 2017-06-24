@@ -21,9 +21,9 @@
         
     </nav>
     <section id="main-content">
-
-       
-
+		<c:forEach var="product" items="${productList}">
+        <img src="img/${product.imageName}">
+		</c:forEach>
     </section>
 </body>
 </html>

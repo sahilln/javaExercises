@@ -51,8 +51,16 @@ section {
 	width: 80%;
 	margin: 20px auto;
 	vertical-align: top;
-	text-align: center;
 	min-height: 450px;
 	background-color: #FFF;
 	border-radius: 7px;
+}
+
+.eachToy > img{
+	float:left;
+	height: 100px;
+	width: auto;
+}
+
+
 }
