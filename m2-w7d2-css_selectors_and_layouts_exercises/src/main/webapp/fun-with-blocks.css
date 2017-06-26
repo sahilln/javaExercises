@@ -1,0 +1,17 @@
+html {
+  font: 96px Courier;
+}
+
+ .box {
+	background-color: green;
+	display: block;
+}
+
+.even {
+	background-color: red;
+	display: block;
+}
+
+.layer { 
+	display: inline;
+}
