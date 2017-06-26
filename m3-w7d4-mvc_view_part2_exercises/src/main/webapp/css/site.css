@@ -48,7 +48,7 @@ nav li a:hover {
 section {
 	clear: both;
 	display: block;
-	width: 80%;
+	width: 1400px;
 	margin: 20px auto;
 	vertical-align: top;
 	min-height: 450px;
@@ -56,11 +56,75 @@ section {
 	border-radius: 7px;
 }
 
-.eachToy > img{
-	float:left;
-	height: 100px;
+.toyDescription{
+	display: inline-block;
+	vertical-align: top
+}
+
+h1{
+	text-align: center;
+}
+
+.pic{
+	height: auto;
+	width: 160px;
+	padding-right: 30px;
+}
+
+.best{
+	display: inline;
+	font-size: 12px;
+	color: red;
+}
+
+#name{
+	font-weight: bold;
+	float: left;
+}
+#manufacturer{
+	color: grey;
+}
+
+.tile{
+	display: inline-block;
+	padding-left: 80px;
+	padding-right: 80px;
+	text-align: center;
+}
+
+.wrapper{
+    width: 1200px;
+}
+.bs{
+	display: inline-block;
+	font-size: 12px;
+	color: red;
+}
+.pname{
+	display:inline-block;
+} 
+
+.even {
+    background-color: #a3abb7;
+    width: 2000px;
+}
+.table{
+	text-align: center;
+}
+
+#title{
+	padding-right: 50px;
+	width: 3000px;
+	text-align: left;
+}
+
+.pics{
+	height: 300px;
 	width: auto;
 }
 
-
+#desc{
+  	max-width: 800px;
 }
+}
+

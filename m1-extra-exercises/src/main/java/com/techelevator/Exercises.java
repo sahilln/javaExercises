@@ -20,11 +20,7 @@ public class Exercises {
         	}
     	}
     	int length = nums.length;
-    	list.toArray();
-    	
-    	
-    	
-    	
+    	listArray = list.toArray();
     }
     
     /*

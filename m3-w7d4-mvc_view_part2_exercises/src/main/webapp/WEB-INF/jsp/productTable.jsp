@@ -1,29 +1,61 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-<!DOCTYPE html>
+<c:import url="header.jsp"/>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Product Table View</title>
-    <link rel="stylesheet" href="css/site.css" />
-</head>
-<body>
-    <header>
-        <h1>MVC Exercises - Views Part 2: Models</h1>        
-    </header>
-    <nav>
-        <ul>
-            <li><a href="productList">List Layout</a></li>
-            <li><a href="productTiles">Tiles Layout</a></li>
-            <li><a href="productTable">Table Layout</a></li>
-        </ul>
-        
-    </nav>
+<h1>Toy Department</h1>
     <section id="main-content">
 
-       
+	<table class="table">
+	
+		<tr>
+		<td id="title"></td>
+		<c:forEach var="product" items="${productList}">
+			<td> <img class = "pic" src="img/${product.imageName}">
+			<c:choose>
+				<c:when test="${product.topSeller}">
+				<div class="best">BEST SELLER!</div>
+				</c:when>
+			</c:choose>
+			</td>
+		</c:forEach>
+		</tr>
+		
+		<tr>
+		<td id="title"> Name </td>
+		<c:forEach var="product" items="${productList}">
+		<td class="even">${product.name}</td>
+		</c:forEach>
+		</tr>
+		
+		<tr>
+		<td id="title"> Rating </td>
+		<c:forEach var="product" items="${productList}">
+		<td class="odd"><img src="img/${Math.round(product.averageRating)}-star.png" style="width: 5em; height: 0.9em;" /></td>
+		</c:forEach>
+		</tr>
+		
+		<tr>
+		<td id="title"> Mfr </td>
+		<c:forEach var="product" items="${productList}">
+		<td class="even">${product.manufacturer}</td>
+		</c:forEach>
+		</tr>
+		
+		<tr>
+		<td id="title"> Price </td>
+		<c:forEach var="product" items="${productList}">
+		<td class="odd" style= "color: red;">$${product.price}</td>
+		</c:forEach>
+		</tr>
+		
+		<tr>
+		<td id="title"> wt. (in lbs) </td>
+		<c:forEach var="product" items="${productList}">
+		<td class="even">${product.weightInLbs}</td>
+		</c:forEach>
+		</tr>
+	
+	
+	</table>
 
-    </section>
-</body>
-</html>
+<c:import url="footer.jsp"/>
