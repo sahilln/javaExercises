@@ -5,7 +5,12 @@
 
 			<c:forEach var="product" items="${productList}">
 			<div class = "eachToy">	
-				<img class="pic" src="img/${product.imageName}">
+				<c:url var="productLink" value="/productDetail">
+					<c:param name="productId" value="${product.productId}"/>
+				</c:url>
+				<a href="${productLink}">
+					<img class="pic" src="img/${product.imageName}">
+				</a>
 					<div class = "toyDescription">
 						<div id=name>${product.name}</div>
 						<c:choose>

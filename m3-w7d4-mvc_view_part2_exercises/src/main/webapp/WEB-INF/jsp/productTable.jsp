@@ -10,7 +10,12 @@
 		<tr>
 		<td id="title"></td>
 		<c:forEach var="product" items="${productList}">
-			<td> <img class = "pic" src="img/${product.imageName}">
+			<c:url var="productLink" value="/productDetail">
+					<c:param name="productId" value="${product.productId}"/>
+				</c:url>
+			<td> <a href="${productLink}">
+					<img class="pic" src="img/${product.imageName}">
+				</a>
 			<c:choose>
 				<c:when test="${product.topSeller}">
 				<div class="best">BEST SELLER!</div>
