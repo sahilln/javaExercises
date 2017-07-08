@@ -1,6 +1,8 @@
 package com.techelevator;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -12,16 +14,18 @@ public class Exercises {
     arrayDeduplication([]) → []        
     arrayDeduplication([1, 1, 1]) → [1]
     */
-    public int[] arrayDeduplication(int[] nums) {
-    	List<Integer> list = new ArrayList<Integer>();
-    	for(int i = 0; i < nums.length; i++){
-        	if(nums[i] != nums[i+1]){
-        		list.add(nums[i]);
-        	}
-    	}
-    	int length = nums.length;
-    	listArray = list.toArray();
-    }
+	
+	public int[] arrayDeduplication(int[] nums) {
+		HashSet<Integer> noDups = new LinkedHashSet<Integer>();
+		
+		for(int num: nums){
+			noDups.add(num);
+		}
+		int[] noD = new int[noDups.size()];
+		for(int i = 0; i < noDups.size(); i++){
+			noD[i] = noDups.get(i);
+		}
+	} 
     
     /*
     CHALLENGE: Using array A and array B, return an array that is the intersection of both A and B.
@@ -32,8 +36,26 @@ public class Exercises {
         arrayIntersection([], []) → []
     */
     public int[] arrayIntersection(int[] a, int[] b) {
-        return null;
-    }
+    	HashSet<Integer> intersectionAB = new HashSet<Integer>(); 
+    	List<Integer> intAB = new ArrayList<Integer>();
+     	for(int num: a){
+    		intersectionAB.add(num);
+    	}
+     	
+     	for(int num: b){
+     		int count = intersectionAB.size();
+    		intersectionAB.add(num);
+    		count++;
+    		if(intersectionAB.size() != count){
+    			intAB.add(num);
+    		}
+    	}
+     	int[] AB = new int[intAB.size()];
+     	for(int i = 0; i < intAB.size(); i++){ 
+     		AB[i] = intAB.get(i);
+     	}
+     	return AB;
+    } 
     
     /*
     Given an integer array, return the array sorted lowest to highest.
@@ -51,8 +73,29 @@ public class Exercises {
     blackjack(21, 19) → 21
     blackjack(19, 22) → 19
     */
-    public int blackjack(int a, int b) {
-        return 0;
+    public int blackjack(int a, int b) { 
+        int a21 = 21 - a;
+        int b21 = 21 - b; 
+        int closest = 0;
+        
+        if (a21 < 0 && b21 < 0){  
+        	return 0;
+        }
+        else if(a21 < 0){
+        	return b;
+        }
+        else if(b21 < 0){
+        	return a;
+        }
+        else{
+        	closest = Math.min(a21, b21);
+        	if (closest == a21){
+        		return a;
+        	}
+        	else{
+        		return b;
+        	}
+        }
     }
     
     /*
@@ -108,7 +151,18 @@ public class Exercises {
     lastDigit(23, 19, 3) → true
     */
     public boolean lastDigit(int a, int b, int c) {
-        return false;
+    	if((a % 10) == (b % 10)){
+    		return true;
+    	}
+    	else if((a % 10) == (c % 10)){
+    		return true;
+    	}
+    	else if((b % 10) == (c % 10)){
+    		return true;
+    	}
+    	else{
+    		return false;
+    	}
     }
 
     /*
@@ -121,7 +175,21 @@ public class Exercises {
     makeBricks(3, 2, 10) → true
     */
     public boolean makeBricks(int small, int big, int goal) {
-        return false;
+//        int totalBig = 5 * big;
+//    	int totalSize = small + totalBig; 
+//        
+//        if(goal % totalSize == 0){
+//        	return true;
+//        }
+//        else if(goal % small == 0){
+//        	return true;
+//        }
+//        else if(goal % totalBig == 0){
+//        	return true;
+//        }
+//        else{
+//        	return false;
+//        }
     }
 
     /*

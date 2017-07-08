@@ -1,6 +1,6 @@
 package com.techelevator;
 
-import org.junit.*;
+import org.junit.*; 
 import static org.junit.Assert.*;
 
 public class ExercisesTest {
@@ -67,7 +67,7 @@ public class ExercisesTest {
 	blackjack(21, 20) → 21
     */
 	@Test
-    public void blackjack() {
+    public void blackjack() {  
 		areEqual(21, exercises.blackjack(19, 21), "Input: 19, 21");
 		areEqual(21, exercises.blackjack(21, 19), "Input: 21, 19");
 		areEqual(19, exercises.blackjack(19, 22), "Input: 19, 22");
@@ -83,7 +83,7 @@ public class ExercisesTest {
 		areEqual(4, exercises.blackjack(3, 4), "Input: 3, 4");
 		areEqual(3, exercises.blackjack(3, 2), "Input: 3, 2");
 		areEqual(21, exercises.blackjack(21, 20), "Input: 21, 20");
-    }
+    } 
     
     /*
     closeFar(1, 2, 10) → true
