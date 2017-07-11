@@ -36,6 +36,8 @@
 	return result;
 }
 
+function titleCase()
+
 function perfectSquare(num){
 	var square = Math.sqrt(num);
 	if(square % 1 != 0){
