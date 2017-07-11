@@ -36,3 +36,12 @@
 	return result;
 }
 
+function perfectSquare(num){
+	var square = Math.sqrt(num);
+	if(square % 1 != 0){
+		return -1;
+	}
+	else{
+		return Math.pow(square + 1, 2);
+	}
+}
