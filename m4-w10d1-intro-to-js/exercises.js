@@ -99,10 +99,10 @@ function alarmClock(day, vacation){
 	}
 }
 
-/* function makeMiddle (numArray){
+function makeMiddle (numArray){
 	length = numArray.length;
 	var makeMiddle = [];
-	if((numArray.length % 2 !== 0) || (num.Array.length < 2)){
+	if((numArray.length % 2 != 0) || (numArray.length < 2)){
 		return makeMiddle;
 	}
 	else{
@@ -110,7 +110,7 @@ function alarmClock(day, vacation){
 		makeMiddle[1] = numArray[length/2]
 		return makeMiddle;
 	}
-} */
+} 
 
 function oddOnly(numArray){
 	var results = [];
@@ -124,11 +124,59 @@ function oddOnly(numArray){
 
 function weave(numArray1, numArray2){
 	var weave = [];
-	if(numArray1.length < numArray2.length){
-		for(var i = 0; i < numArray.length; i++){
-			weave.push(num)
+	if(numArray1.length == numArray2.length){
+		for(var i = 0; i < numArray1.length; i++){
+			weave.push(numArray1[i]);
+			weave.push(numArray2[i]);
 		}
 	}
+	if(numArray1.length < numArray2.length){
+		for(var i = 0; i < numArray1.length; i++){
+			weave.push(numArray1[i]);
+			weave.push(numArray2[i]); 
+		}
+		for(var i = numArray1.length; i < numArray2.length; i++){
+			weave.push(numArray2[i]);
+		}
+	}
+	else{
+		for(var i = 0; i < numArray2.length; i++){
+			weave.push(numArray1[i]);
+			weave.push(numArray2[i]); 
+		}
+		for(var i = numArray2.length; i < numArray1.length; i++){
+			weave.push(numArray1[i]);
+		}
+	}
+	
+	return weave;
+}
+
+function cigarParty(cigars, weekend){
+	if(weekend){
+		if(cigars >= 40){
+			return true;
+		}
+		else{
+			return false;
+		}
+	}
+	else{
+		if (cigars >= 40 && cigars <= 60){
+			return true;
+		}
+		else{
+			return false;
+		}
+	}
+}
+
+function stringSplosion(str){
+	var results = "";
+	for(var i = 1; i <= str.length; i++){
+		results += str.substring(0, i);
+	}
+	return results;
 }
 
 function countValues(numArray) {
@@ -148,6 +196,21 @@ function countValues(numArray) {
 		results[currentNum] = currentCount;
 	}
 	return results;
+}
+
+function fizzBuzz(num){
+	if(num % 3 == 0 && num % 5 == 0){
+		return "FizzBuzz";
+	}
+	else if(num % 3 == 0){
+		return "Fizz";
+	}
+	else if(num % 5 == 0){
+		return "Buzz";
+	}
+	else{
+		return num;
+	}
 }
 
 function reverseArray(numArray) {
