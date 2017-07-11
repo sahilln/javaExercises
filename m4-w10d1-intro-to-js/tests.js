@@ -113,7 +113,7 @@ QUnit.test("Count Values", function (assert) {
 
     assert.deepEqual({}, countValues([]));
     assert.deepEqual({ 0: 1 }, countValues([0]));
-    assert.deepEqual({ 0: 1, 20: 1 }, countValues[0, 20]);
+    assert.deepEqual({ 0: 1, 20: 1 }, countValues([0, 20]));
 });
 
 QUnit.test("Reverse Array", function (assert) {
