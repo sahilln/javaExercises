@@ -24,10 +24,24 @@ $(document).ready(function () {
 		$('#grandtotal .price').html('$' + (subtotal + shippingCost));
 	});
 	
-	var gameCell = $("#gameCell");
-	gameCell.on("keydown", function (event){
-		if($(this).val() == )
-		$('#gameboard').children("#gamecell").next().addClass("ship");
+	$(document).keydown(function(e){
+	    if (e.keyCode == 37) { 
+	       alert( "left pressed" );
+	       return false;
+	    }
+	    if (e.keyCode == 38) { 
+		       alert( "up pressed" );
+		       return false;
+		}
+	    if (e.keyCode == 39) { 
+		       alert( "right pressed" );
+		       return false;
+		}
+	    if (e.keyCode == 40) { 
+		       alert( "down pressed" );
+		       return false;
+		    }
+	    
 	});
 	
 	
