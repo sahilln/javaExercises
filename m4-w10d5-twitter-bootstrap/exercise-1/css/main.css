@@ -1,0 +1,20 @@
+.glyphicon:before {
+    font-size: 5em;
+}
+
+#features{
+  max-width: 1000px;
+  text-align: center;
+}
+
+#impact{
+  max-width: 1000px;
+}
+
+#impact img{
+  max-width: 300px;
+}
+
+#each-feature{
+  text-align: center;
+}
