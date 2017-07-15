@@ -10,6 +10,10 @@
       <!--[if (lt IE 9) & (!IEMobile)]>
         <script src="js/vendor/respond.min.js"></script>
       <![endif]-->
+		  <meta name="viewport" content="width=device-width, initial-scale=1">
+		  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     </head>
     <body>
       <header>
@@ -21,26 +25,38 @@
           <li><a href="#signup">Sign Up</a></li>
         </ul>
       </header>
-
+	  <div class="jumbotron">
       <h1>Big Welcome Message</h1>
-      <p>Ingenious marketing copy. And some more ingenious marketing copy.<a href="#features">Learn more</a></p>
+	  <p>Ingenious marketing copy. And some more ingenious marketing copy.
+	  <a class="btn btn-primary btn-lg" href="#features">Learn more</a></p>
+ 	 </div>
+      
 
       <!-- FEATURES SECTION -->
-      <section id="features">
+ <div class="container-fluid"> 
+	  <section id="features">
         <h1>Features</h1>
-        <h2>Feature 1</h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo. </p>
-        <h2>Feature 2</h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo. </p>
-        <h2>Feature 3</h2>
-        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
-        <h2>Feature 4</h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo. </p>
-        <h2>Feature 5</h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo. </p>
-        <h2>Feature 6</h2>
-        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+	<div class="row">   
+        <div class="col-md-4">
+		<img src = "glyphicon glyphicon-cloud">
+		<h2>Feature 1</h2>
+        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo. </p></div>
+        <div class="col-md-4"><h2>Feature 2</h2>
+        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo. </p></div>
+        <div class="col-md-4"><h2>Feature 3</h2>
+        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p></div>
+	</div>
+	
+	<div class="row">   
+		<div class="col-md-4"><h2>Feature 4</h2>
+        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo. </p></div>
+        <div class="col-md-4"><h2>Feature 5</h2>
+        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo. </p></div>
+        <div class="col-md-4"><h2>Feature 6</h2>
+        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p></div>
+	</div>
       </section><!-- /.row -->
+  </div>
 
       <!-- IMPACT SECTION -->
       <section id="impact">
