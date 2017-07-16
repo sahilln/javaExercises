@@ -18,3 +18,89 @@
 #each-feature{
   text-align: center;
 }
+
+.jumbotron{
+	color: white;
+	background-image: url(file:///Users/snaik/Development/workspaces/sahillnaik-java-exercises/m4-w10d5-twitter-bootstrap/exercise-1/img/te_present_1600x1060.jpg);
+	background-position: 0% 45%;
+	padding-left: 300px;
+	padding-top: 0px;
+	padding-bottom: 300px;
+	padding-right: 0px;
+}
+
+.jumbotron h1{
+	padding-right: 100px;
+}
+
+.btn-group-lg>.btn, .btn-lg{
+	margin-left: 200px;
+}
+
+.container-fluid {
+	margin: 0 auto;
+	width: 80%;
+}
+
+
+.thumbnail {
+    position: relative;
+}
+
+.caption {
+    position: absolute;
+    top: 70%;
+    left: 0;
+    width: 100%;
+}
+
+#impact p{
+	color:white;
+	text-align: left;
+	font-size: 15px;
+}
+
+blockquote {
+	border: none;
+}
+
+td{
+	min-width: 120px;
+}
+
+th, tfoot{
+	text-align: center;
+	color: white;
+}
+
+#signup h2{
+	font-size: 20px;
+}
+
+#price{
+	font-size: 50px;
+	padding-bottom: 20px;
+}
+
+tr:nth-child(even) {background: #CCC}
+tr:nth-child(odd) {background: #FFF}
+
+#basic{
+  background-color: #4286f4;
+}
+
+#premium{
+  background-color: #21d16d;
+}
+
+#pro{
+  background-color: #e84037;
+}
+
+table {
+    border: 1px solid black;
+}
+
+tr a{
+  color: white;
+}

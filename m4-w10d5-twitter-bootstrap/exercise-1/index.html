@@ -3,8 +3,8 @@
     <head>
       <meta charset="utf-8">
       <title>Tech Elevator</title>
-      Main Style Sheet
-      <link rel="stylesheet" href="css/main.css">
+      <!-- Main Style Sheet -->
+
 
       <!-- Respond.js for IE 8 or less only
       [if (lt IE 9) & (!IEMobile)]>
@@ -14,21 +14,43 @@
 		  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 		  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+		  <link rel="stylesheet" href="css/main.css">
     </head>
     <body>
-      <header>
-        <img src="img/te_logo.png" alt="Tech Elevator" width="120">
-        <ul>
-          <li><a href="#welcome">Welcome</a></li>
-          <li><a href="#features">Features</a></li>
-          <li><a href="#impact">Impact</a></li>
-          <li><a href="#signup">Sign Up</a></li>
-        </ul>
-      </header>
-	  <div class="jumbotron">
-      <h1>Big Welcome Message</h1>
-	  <p>Ingenious marketing copy. And some more ingenious marketing copy.
-	  <a class="btn btn-primary btn-lg" href="#features">Learn more</a></p>
+
+	<nav class="navbar navbar">
+	  <div class="container-fluid">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="#"><img src="img/te_logo.png" alt="Tech Elevator" width="120"></a>
+	    </div>
+
+
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav">
+		        <li><a href="#">WELCOME</a></li>
+		        <li><a href="#">FEATURES</a></li>
+		        <li><a href="#">IMPACT</a></li>
+				<li><a href="#">SIGN UP</a></li>
+		      </ul>
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
+
+
+
+	 <div class="jumbotron">
+      	<h1>Big Welcome Message</h1>
+	  	<p>Ingenious marketing copy. And some more ingenious marketing copy.
+	  	<a class="btn btn-primary btn-lg" href="#features">Learn more</a></p>
  	 </div>
 
 
@@ -74,29 +96,72 @@
         <h1>Impact</h1>
 
         <div class="row">
-            <div class="col-sm-4"><img src="img/photo_one.jpg" alt="Photo One">
-            <blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin euismod, nulla pretium commodo ultricies</p></blockquote></div>
 
-            <div class="col-sm-4">  <img src="img/photo_two.jpg" alt="Photo Two">
-            <blockquote><p>Lorem ipsum dolor sit amet</p></blockquote></div>
+            <div class="col-sm-4">
+				<div class="thumbnail text-center">
+					<img src="img/photo_one.jpg" alt="Photo One" class="img-responsive">
+            		<div class="caption">
+						<blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin euismod, nulla pretium commodo ultricies</p></blockquote>
+					</div>
+				</div>
+			</div>
 
-            <div class="col-sm-4"><img src="img/photo_three.jpg" alt="Photo Three">
-            <blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin euismod, nulla</p></blockquote></div>
+            <div class="col-sm-4">
+				<div class="thumbnail text-center">
+					<img src="img/photo_two.jpg" alt="Photo Two">
+					<div class="caption">
+            			<blockquote><p>Lorem ipsum dolor sit amet</p></blockquote>
+					</div>
+				</div>
+			</div>
+
+            <div class="col-sm-4">
+				<div class="thumbnail text-center">
+					<img src="img/photo_three.jpg" alt="Photo Three">
+					<div class="caption">
+  			  			<blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin euismod, nulla</p></blockquote>
+					</div>
+				</div>
+			</div>
 
         </div>
 
         <div class ="row">
 
-          <div class="col-sm-4"><img src="img/photo_four.jpg" alt="Photo Four">
-          <blockquote><p>Lorem ipsum dolor sit amet</p></blockquote></div>
+          <div class="col-sm-4">
+			  <div class="thumbnail text-center">
+			  	<img src="img/photo_four.jpg" alt="Photo Four">
+				<div class="caption">
+          	  		<blockquote><p>Lorem ipsum dolor sit amet</p></blockquote>
+				</div>
+			  </div>
+		  </div>
 
-          <div class="col-sm-4"><img src="img/photo_five.jpg" alt="Photo Five">
-          <blockquote ><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin euismod, nulla pretium commodo ultricies</p></blockquote></div>
+          <div class="col-sm-4">
+			  <div class="thumbnail text-center">
+			  	<img src="img/photo_five.jpg" alt="Photo Five">
+				<div class="caption">
+          	 		<blockquote ><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin euismod, nulla pretium commodo ultricies</p></blockquote>
+				</div>
+		      </div>
+		  </div>
 
-          <div class="col-sm-4"><img src="img/photo_six.jpg" alt="Photo Six">
-          <blockquote><p>Lorem ipsum dolor sit amet elit.</p></blockquote>
-          <img src="img/photo_seven.jpg" alt="Photo Seven">
-          <blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin euismod, nulla pretium commodo ultricies</p></blockquote></div>
+          <div class="col-sm-4">
+			<div class="thumbnail text-center">
+		  		<img src="img/photo_six.jpg" alt="Photo Six">
+				<div class="caption">
+					<blockquote><p>Lorem ipsum dolor sit amet elit.</p></blockquote>
+				</div>
+			</div>
+
+		  	<div class="thumbnail text-center">
+				<img src="img/photo_seven.jpg" alt="Photo Seven">
+				<div class="caption">
+					<blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin euismod, nulla pretium commodo ultricies</p></blockquote>
+				</div>
+			</div>
+
+		</div>
 
         </div>
 
@@ -106,19 +171,22 @@
       <!-- /#impact -->
 
       <!-- SIGNUP SECTION -->
+<div class="container-fluid">
       <section id="signup">
           <h1>Sign up now!</h1>
+          <div class="row">
+              <div class="col-md-4">
             <table>
               <thead>
                 <tr>
-                  <th>
+                  <th colspan="2" id="basic">
                     <h2>Basic Plan</h2>
-                    <div>$19</div>
+                    <div id = "price">$19</div>
                   </th>
                 </tr>
               </thead>
               <tfoot>
-                <tr><td><a href="#">Sign up now!</a></td></tr>
+                <tr><td colspan="2" id="basic"><a href="#">Sign up now!</a></td></tr>
               </tfoot>
               <tbody>
                 <tr><td>Feature</td><td>Name</td></tr>
@@ -128,17 +196,19 @@
                 <tr><td>Feature</td><td>Name</td></tr>
               </tbody>
             </table>
+		</div>
+		<div class="col-md-4">
             <table>
               <thead>
                 <tr>
-                  <th>
+                  <th colspan="2" id="premium">
                     <h2>Premium Plan</h2>
-                    <div>$29</div>
+                    <div id = "price">$29</div>
                   </th>
                 </tr>
               </thead>
               <tfoot>
-                <tr><td><a href="#">Sign up now!</a></td></tr>
+                <tr><td colspan="2" id="premium"><a href="#">Sign up now!</a></td></tr>
               </tfoot>
               <tbody>
                 <tr><td>Feature</td><td>Name</td></tr>
@@ -148,17 +218,19 @@
                 <tr><td>Feature</td><td>Name</td></tr>
               </tbody>
             </table>
+		</div>
+		<div class="col-md-4">
             <table>
               <thead>
                 <tr>
-                  <th>
+                  <th colspan="2" id="pro">
                     <h2>Pro Plan</h2>
-                    <div>$39</div>
+                    <div id = "price">$39</div>
                   </th>
                 </tr>
               </thead>
               <tfoot>
-                <tr><td><a href="#">Sign up now!</a></td></tr>
+                <tr><td colspan="2" id="pro"><a href="#">Sign up now!</a></td></tr>
               </tfoot>
               <tbody>
                 <tr><td>Feature</td><td>Name</td></tr>
@@ -168,7 +240,9 @@
                 <tr><td>Feature</td><td>Name</td></tr>
               </tbody>
             </table>
+		</div>
       </section><!-- /#signup -->
+  </div>
 
 </body>
 </html>
