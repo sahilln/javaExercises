@@ -9,12 +9,10 @@ $(document)
 						if (sameShipping.is(':checked')) {
 							$("#ShippingAddress1").val(
 									$("#BillingAddress1").val());
-							$("#ShippingAddress2").val(
-									$("#BillingAddress2").val());
+							$("#ShippingAddress2").val($("#BillingAddress2").val());
 							$("#ShippingCity").val($("#BillingCity").val());
 							$("#ShippingState").val($("#BillingState").val());
-							$("#ShippingPostalCode").val(
-									$("#BillingPostalCode").val());
+							$("#ShippingPostalCode").val($("#BillingPostalCode").val());
 						}
 					});
 
