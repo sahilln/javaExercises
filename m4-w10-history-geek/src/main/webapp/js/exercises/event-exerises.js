@@ -1,14 +1,11 @@
 ﻿/// <reference path="../jquery-3.1.1.js" />
 
-$(document)
-		.ready(
-				function() {
+$(document).ready(function() {
 
 					var sameShipping = $("#SameShipping");
 					sameShipping.on("change", function(event) {
 						if (sameShipping.is(':checked')) {
-							$("#ShippingAddress1").val(
-									$("#BillingAddress1").val());
+							$("#ShippingAddress1").val($("#BillingAddress1").val());
 							$("#ShippingAddress2").val($("#BillingAddress2").val());
 							$("#ShippingCity").val($("#BillingCity").val());
 							$("#ShippingState").val($("#BillingState").val());
@@ -17,21 +14,16 @@ $(document)
 					});
 
 					var shippingMethod = $('input[name="ShippingType');
-					shippingMethod.on("change",
-							function(event) {
-								var shippingCost = parseFloat($(this).attr(
-										'data-cost'));
+					shippingMethod.on("change", function(event) {
+								var shippingCost = parseFloat($(this).attr('data-cost'));
 								$('#shipping .price').html('$' + shippingCost);
 
-								var subtotal = parseFloat($('#subtotal .price')
-										.html().substring(1));
+								var subtotal = parseFloat($('#subtotal .price').html().substring(1));
 
-								$('#grandtotal .price').html(
-										'$' + (subtotal + shippingCost));
+								$('#grandtotal .price').html('$' + (subtotal + shippingCost));
 							});
 
-					$(document)
-							.keydown(
+					$(document).keydown(
 									function(e) {
 
 										switch (e.which) {
